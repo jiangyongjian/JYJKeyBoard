@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UITextField+BXExtension.h"
 
 @interface ViewController ()
 /** button */
@@ -119,7 +120,22 @@
  *  完成按钮点击
  */
 - (void)doneButton:(UIButton *)doneButton{
-    self.textField.text = [self.textField.text stringByAppendingString:doneButton.currentTitle];
+    // 获得光标所在的位置
+    NSUInteger insertIndex = [self.textField selectedRange].location;
+    
+    NSMutableString *string = [NSMutableString stringWithString:self.textField.text];
+    
+    [string insertString:doneButton.currentTitle atIndex:insertIndex];
+    
+    // 重新赋值
+    self.textField.text = string;
+    
+    // 让光标回到插入文字后面
+    [self.textField setSelectedRange:NSMakeRange(insertIndex + 1, 0)];
+    
+    
+    
+//    self.textField.text = [self.textField.text stringByAppendingString:doneButton.currentTitle];
 }
 
 /**

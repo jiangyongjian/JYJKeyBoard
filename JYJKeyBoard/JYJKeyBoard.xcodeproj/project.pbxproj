@@ -13,6 +13,7 @@
 		E220A4251D3725D9002844F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E220A4231D3725D9002844F5 /* Main.storyboard */; };
 		E220A4271D3725D9002844F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E220A4261D3725D9002844F5 /* Assets.xcassets */; };
 		E220A42A1D3725D9002844F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E220A4281D3725D9002844F5 /* LaunchScreen.storyboard */; };
+		E221B5911D37B76000722BA4 /* UITextField+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E221B5901D37B76000722BA4 /* UITextField+BXExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		E220A4261D3725D9002844F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E220A4291D3725D9002844F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E220A42B1D3725D9002844F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E221B58F1D37B76000722BA4 /* UITextField+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BXExtension.h"; sourceTree = "<group>"; };
+		E221B5901D37B76000722BA4 /* UITextField+BXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BXExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		E220A4191D3725D9002844F5 /* JYJKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
+				E221B58F1D37B76000722BA4 /* UITextField+BXExtension.h */,
+				E221B5901D37B76000722BA4 /* UITextField+BXExtension.m */,
 				E220A41D1D3725D9002844F5 /* AppDelegate.h */,
 				E220A41E1D3725D9002844F5 /* AppDelegate.m */,
 				E220A4201D3725D9002844F5 /* ViewController.h */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E221B5911D37B76000722BA4 /* UITextField+BXExtension.m in Sources */,
 				E220A4221D3725D9002844F5 /* ViewController.m in Sources */,
 				E220A41F1D3725D9002844F5 /* AppDelegate.m in Sources */,
 				E220A41C1D3725D9002844F5 /* main.m in Sources */,
@@ -302,6 +308,7 @@
 				E220A4301D3725D9002844F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
