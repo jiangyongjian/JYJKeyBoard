@@ -17,22 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vM-oB-Z2U">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="系统键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vM-oB-Z2U">
                                 <rect key="frame" x="40" y="120" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="在系统上修改的键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69j-6W-X4U" customClass="BXTextField">
+                                <rect key="frame" x="40" y="214" width="520" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="69j-6W-X4U" firstAttribute="trailing" secondItem="4vM-oB-Z2U" secondAttribute="trailing" id="0IF-gY-h5z"/>
                             <constraint firstAttribute="trailing" secondItem="4vM-oB-Z2U" secondAttribute="trailing" constant="40" id="5ap-XD-Tpa"/>
+                            <constraint firstItem="69j-6W-X4U" firstAttribute="leading" secondItem="4vM-oB-Z2U" secondAttribute="leading" id="BeL-I8-khG"/>
+                            <constraint firstItem="69j-6W-X4U" firstAttribute="centerX" secondItem="4vM-oB-Z2U" secondAttribute="centerX" id="Qvb-2T-yrE"/>
+                            <constraint firstItem="69j-6W-X4U" firstAttribute="top" secondItem="4vM-oB-Z2U" secondAttribute="bottom" constant="64" id="UjJ-Aq-H2L"/>
                             <constraint firstItem="4vM-oB-Z2U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="o8M-sn-cxY"/>
                             <constraint firstItem="4vM-oB-Z2U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="zRw-WD-ZSI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Qvb-2T-yrE"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="textField" destination="4vM-oB-Z2U" id="OWA-yq-sg0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
