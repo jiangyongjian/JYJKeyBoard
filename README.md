@@ -8,20 +8,12 @@
  `JYJKeyBoard` 用数字键盘输入身份证X
 
 # Usage
- `JYJKeyBoard` 很简单，利用系统的键盘，省去自定义的麻烦
+ `JYJKeyBoard` 很简单，利用系统的键盘，省去自定义的麻烦，BXTextField是继承UITextField的，所以用法跟系统的也一样，下面是使用方法：
 ```
- // 获取到最上层的window,这句代码很关键
-    UIWindow *tempWindow = [[[UIApplication sharedApplication] windows] lastObject];
-    [tempWindow addSubview:doneButton];
+ // 创建textField，我这里直接用，你也可以继承BXTextField
+ BXTextField *textField = [[BXTextField alloc] init];
 
- // 添加动画
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationDuration:animationDuration];
-    [UIView setAnimationCurve:animationCurve];
-    doneButton.transform = CGAffineTransformTranslate(doneButton.transform, 0, -kbHeight);
-    self.button.transform = CGAffineTransformTranslate(self.button.transform, 0, -kbHeight);
-    [UIView commitAnimations];
+// 然后根据自己需要设置字体大小，颜色子类的，跟系统的完全一样
 ```
 
 # 联系我
