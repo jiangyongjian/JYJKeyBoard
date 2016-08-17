@@ -164,13 +164,17 @@
     
     NSMutableString *string = [NSMutableString stringWithString:self.text];
     
-    [string insertString:doneButton.currentTitle atIndex:insertIndex];
+    [string replaceCharactersInRange:self.selectedRange withString:doneButton.currentTitle];
     
     // 重新赋值
     self.text = string;
     
     // 让光标回到插入文字后面
     [self setSelectedRange:NSMakeRange(insertIndex + 1, 0)];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[UIDevice currentDevice] playInputClick];
+    });
 }
 
 /**
