@@ -13,8 +13,9 @@
  // 创建textField，我这里直接用，你也可以继承BXTextField
  BXTextField *textField = [[BXTextField alloc] init];
 
-// 然后根据自己需要设置字体大小，颜色子类的，跟系统的完全一样
+ // 然后根据自己需要设置字体大小，颜色子类的，跟系统的完全一样
 ```
+缺点：暂时不能用addTarget监听文字改变，只能应通知UITextFieldTextDidChangeNotification来监听
 
 # 联系我
  QQ 453255376, 如有bug、不明白的，希望大家踊跃联系我，把程序写的更好。
