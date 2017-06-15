@@ -163,6 +163,14 @@
     // 获得光标所在的位置
     NSUInteger insertIndex = [self selectedRange].location;
     
+    // 强行调用代理，如果有需要调用代理方法，在这里自己调用
+    if ([self.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+        BOOL allowChange = [self.delegate textField:self shouldChangeCharactersInRange:NSMakeRange(insertIndex, 0) replacementString:doneButton.currentTitle];
+        if (!allowChange) {
+            return;
+        }
+    }
+    
     NSMutableString *string = [NSMutableString stringWithString:self.text];
     
     [string replaceCharactersInRange:self.selectedRange withString:doneButton.currentTitle];
