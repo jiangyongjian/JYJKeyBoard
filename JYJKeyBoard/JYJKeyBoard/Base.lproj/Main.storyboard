@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,28 +18,38 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="系统键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vM-oB-Z2U">
-                                <rect key="frame" x="40" y="120" width="520" height="30"/>
+                                <rect key="frame" x="40" y="120" width="295" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="在系统上修改的键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69j-6W-X4U" customClass="BXTextField">
-                                <rect key="frame" x="40" y="214" width="520" height="30"/>
+                                <rect key="frame" x="40" y="214" width="295" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="系统键盘中文" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lc9-IS-n7k">
+                                <rect key="frame" x="39.5" y="65" width="295" height="30"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="69j-6W-X4U" firstAttribute="trailing" secondItem="4vM-oB-Z2U" secondAttribute="trailing" id="0IF-gY-h5z"/>
                             <constraint firstAttribute="trailing" secondItem="4vM-oB-Z2U" secondAttribute="trailing" constant="40" id="5ap-XD-Tpa"/>
                             <constraint firstItem="69j-6W-X4U" firstAttribute="leading" secondItem="4vM-oB-Z2U" secondAttribute="leading" id="BeL-I8-khG"/>
+                            <constraint firstItem="lc9-IS-n7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F4A-Z9-FmC"/>
                             <constraint firstItem="69j-6W-X4U" firstAttribute="centerX" secondItem="4vM-oB-Z2U" secondAttribute="centerX" id="Qvb-2T-yrE"/>
+                            <constraint firstItem="lc9-IS-n7k" firstAttribute="width" secondItem="4vM-oB-Z2U" secondAttribute="width" id="Roc-xo-HCC"/>
                             <constraint firstItem="69j-6W-X4U" firstAttribute="top" secondItem="4vM-oB-Z2U" secondAttribute="bottom" constant="64" id="UjJ-Aq-H2L"/>
+                            <constraint firstItem="4vM-oB-Z2U" firstAttribute="top" secondItem="lc9-IS-n7k" secondAttribute="bottom" constant="25" id="dk2-UN-fnA"/>
                             <constraint firstItem="4vM-oB-Z2U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="o8M-sn-cxY"/>
+                            <constraint firstItem="lc9-IS-n7k" firstAttribute="height" secondItem="4vM-oB-Z2U" secondAttribute="height" id="xap-vi-Fwj"/>
                             <constraint firstItem="4vM-oB-Z2U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="zRw-WD-ZSI"/>
                         </constraints>
                         <variation key="default">
@@ -47,6 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
