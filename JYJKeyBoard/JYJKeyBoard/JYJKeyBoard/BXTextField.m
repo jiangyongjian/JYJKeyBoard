@@ -66,6 +66,12 @@
                 [self setupDownKey];
             }
         }
+        // 发出通知
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0) {
+            if (self.notification) {
+                [self setupDownKey];
+            }
+        }
     }
 }
 
@@ -92,13 +98,13 @@
     // 获取到最上层的window,这句代码很关键
     UIWindow *tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 9.0) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) {
         tempWindow = [[[UIApplication sharedApplication] windows] lastObject];
     }
     
     // 通过图层查看系统的键盘有UIKeyboardAutomatic这个View，第三方的对应位置的view为_UISizeTrackingView
     // 只有iOS 8.0以上需要
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 8.0) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         if (![UIView ff_foundViewInView:tempWindow clazzName:@"UIKeyboardAutomatic"]) return;
     }
     
