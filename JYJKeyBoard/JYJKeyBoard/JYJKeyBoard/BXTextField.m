@@ -167,6 +167,7 @@
     doneButton.titleLabel.font = [UIFont systemFontOfSize:27];
     [doneButton setTitle:@"X" forState:(UIControlStateNormal)];
     [doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
     if (@available(iOS 11.0, *)) {
         if (self.displayingKeyboard) {
             doneButton.alpha = 0.0;
@@ -179,8 +180,13 @@
     }
     [doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
     self.doneButton = doneButton;
+    
     // 获取到最上层的window,这句代码很关键
-    UIWindow *tempWindow = [[[UIApplication sharedApplication] windows] lastObject];
+    UIWindow *tempWindow = tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) {
+        tempWindow = [[[UIApplication sharedApplication] windows] lastObject];
+    }
+    
     // 添加按钮
     [tempWindow addSubview:doneButton];
     
