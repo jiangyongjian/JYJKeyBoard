@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JYJKeyBoard"
-  s.version      = "0.0.4"
+  s.version      = "0.0.6"
   s.ios.deployment_target = '6.0'
   s.summary      = "The keyBoard of ID card"
   s.homepage     = "https://github.com/jiangyongjian/JYJKeyBoard"
