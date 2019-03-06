@@ -10,18 +10,8 @@
 #import "UIView+BXExtension.h"
 #import "UITextField+BXExtension.h"
 
-//判断是否是ipad
-#define isPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-//判断iPhoneX，Xs（iPhoneX，iPhoneXs）
-#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
-//判断iPhoneXr
-#define IS_IPHONE_Xr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
-//判断iPhoneXsMax
-#define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size)&& !isPad : NO)
-
-//判断iPhoneX所有系列
-#define IS_PhoneXAll (IS_IPHONE_X || IS_IPHONE_Xr || IS_IPHONE_Xs_Max)
-
+// 是否为iPhoneX
+#define iPhoneX ([UIScreen mainScreen].bounds.size.height == 812)
 #define BXDangerousAreaH 34
 
 @interface BXTextField ()
@@ -169,7 +159,7 @@
     } else {
         doneButtonY = [UIScreen mainScreen].bounds.size.height + kbHeight - doneButtonH;
     }
-    if (IS_PhoneXAll) {
+    if (iPhoneX) {
         doneButtonH = (kbHeight - 75 - 2) / 4;
         if (self.displayingKeyboard) {
             doneButtonY = [UIScreen mainScreen].bounds.size.height - doneButtonH;
