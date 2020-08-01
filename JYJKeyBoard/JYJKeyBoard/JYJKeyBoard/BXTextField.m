@@ -129,7 +129,7 @@
     CGRect kbEndFrame = [self.notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat kbHeight = kbEndFrame.size.height;
     
-//    NSLog(@"%f -- 291 --- 216", kbHeight);
+    NSLog(@"%f -- 291 --- 216", kbHeight);
     // 这里因为用了第三方的键盘顶部，所有加了44
     if (self.adjustTextFeildH) {
         kbHeight = kbEndFrame.size.height - 44;
